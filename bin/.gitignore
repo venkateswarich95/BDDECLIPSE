@@ -20,9 +20,6 @@ target/
 .settings
 .springBeans
 .sts4-cache
-# Ignore all test-output files
-test-output/
-
 
 ### NetBeans ###
 /nbproject/private/

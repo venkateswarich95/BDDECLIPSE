@@ -51,17 +51,4 @@ public class LoginPageDefinitions {
         Assert.assertEquals(objLogin.getMissingUsernameText(),message);
     }
 
-    @Then("User should be able to see LinkedIn Icon")
-    public void verifyLinkedInIcon( ) {
-
-        Assert.assertTrue(objLogin.getLinkedInIcon());
-    }
-
-    @Then("User should be able to see FaceBook Icon")
-    public void verifyFaceBookIcon( ) {
-
-        Assert.assertTrue(objLogin.getFaceBookIcon());
-    }
-
-
 }
