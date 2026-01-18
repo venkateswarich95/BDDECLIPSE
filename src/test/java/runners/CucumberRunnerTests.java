@@ -9,6 +9,7 @@ import org.testng.annotations.Parameters;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "stepdefinitions",
+        tags = "@ValidCredentials",
         plugin = {
                 "pretty",
                 "html:target/cucumber-reports",
@@ -19,7 +20,7 @@ public class CucumberRunnerTests extends AbstractTestNGCucumberTests {
 
     // ✅ Enable parallel scenario execution
     @Override
-    @DataProvider(parallel = true)
+    @DataProvider(parallel = false)
     public Object[][] scenarios() {
         return super.scenarios();
     }

@@ -18,7 +18,7 @@
 #Sample Feature Definition Template
 Feature: OrangehrmLive
   Background:
-    Given User is on HRMLogin page "https://opensource-demo.orangehrmlive.com/"
+    Given User is on HRMLogin page
 
 
   @InvalidCredentials
@@ -37,3 +37,4 @@ Feature: OrangehrmLive
   Scenario: Login with valid credentials
 
     When User enters username as "Admin" and password as "admin123"
+    Then User should be able to login successfully and new page open

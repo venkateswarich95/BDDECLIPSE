@@ -1,8 +1,8 @@
-<suite name="Chrome Suite" parallel="tests" thread-count="2">
+<!-- --><suite name="Chrome Suite" parallel="tests" thread-count="2">
     <test name="Chrome Tests">
         <parameter name="browser" value="chrome"/>
         <classes>
             <class name="runners.CucumberRunnerTests"/>
         </classes>
     </test>
-</suite>
+</suite><!-- -->

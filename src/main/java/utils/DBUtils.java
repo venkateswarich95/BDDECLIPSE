@@ -8,18 +8,12 @@ import java.sql.Statement;
 public class DBUtils {
     private static Connection connection;
 
-    public static void connect() {
-        try {
-            connection = DriverManager.getConnection(
-                    ConfigReader.get("db.url"),
-                    ConfigReader.get("db.username"),
-                    ConfigReader.get("db.password")
-            );
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
+	/*
+	 * public static void connect() { try { connection =
+	 * DriverManager.getConnection( ConfigReader.get("db.url"),
+	 * ConfigReader.get("db.username"), ConfigReader.get("db.password") ); } catch
+	 * (Exception e) { e.printStackTrace(); } }
+	 */
     public static ResultSet executeQuery(String query) {
         try {
             Statement statement = connection.createStatement();

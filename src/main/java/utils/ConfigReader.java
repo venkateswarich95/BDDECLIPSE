@@ -8,14 +8,15 @@ public class ConfigReader {
     private static Properties properties = new Properties();
 
     static {
-        try (FileInputStream fis = new FileInputStream("src/test/resources/config/config.properties")) {
+        try (FileInputStream fis = new FileInputStream(System.getProperty("user.dir")
+                +"//src//test//resources//config//config.properties")) {
             properties.load(fis);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public static String get(String key) {
+    public static String getProperty(String key) {
         return properties.getProperty(key);
     }
 }
