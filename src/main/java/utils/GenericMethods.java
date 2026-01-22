@@ -131,28 +131,7 @@ public class GenericMethods extends BDD_TestBase {
         Actions act = new Actions(DriverFactory.getDriver());
         act.moveToElement(getElement(element)).click().build().perform();
     }
-
-    /* ============================== ALERTS ============================== */
-
-    public static void accept_alert() {
-        System.out.println("Checking alert");
-        if (isAlertPresent()) {
-            Alert alert = DriverFactory.getDriver().switchTo().alert();
-            System.out.println(" Alert text: " + alert.getText());
-            alert.accept();
-        }
-    }
-
-    public static boolean isAlertPresent() {
-        try {
-            new WebDriverWait(DriverFactory.getDriver(), Duration.ofSeconds(10))
-                    .until(ExpectedConditions.alertIsPresent());
-            return true;
-        } catch (TimeoutException e) {
-            return false;
-        }
-    }
-
+    
     /* ============================== ASSERTIONS ============================== */
 
     public static void assertEquals_with_message(String actual, String expected, String message) {

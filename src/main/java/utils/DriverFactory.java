@@ -12,8 +12,10 @@ public class DriverFactory {
     public static void initDriver() {
 
         if (driver.get() == null) {
-
-         //   String browser = ConfigReader.getProperty("browser");
+        	
+        	// ✅ Browser & Url now comes from config properties
+            //String browser = ConfigReader.getProperty("browser");
+            
         	// ✅ Browser now comes from environment-specific properties
             String browser = EnvironmentReader.get("browser");
 

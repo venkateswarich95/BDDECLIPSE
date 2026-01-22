@@ -95,6 +95,19 @@ Run tests for a specific environment:
 	mvn test -Denv=dev
 	mvn test -Denv=prod
 	
+#Running Tests with Environment & Tags
+
+This project supports dynamic test execution using Maven command-line parameters.
+Users can specify the target environment (dev/qa/prod) and selectively execute test scenarios using Cucumber tags such as @smoke, @sanity, or @regression, without modifying the codebase.
+#Example:
+ Run smoke tests in dev environment
+ 
+	mvn test -Denv=dev -Dcucumber.filter.tags="@smoke"
+
+ Run sanity tests in qa environment
+ 
+	mvn test -Denv=qa -Dcucumber.filter.tags="@sanity"
+
 #Reporting
 
 Cucumber HTML reports are generated under target/cucumber-reports
